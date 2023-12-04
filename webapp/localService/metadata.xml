@@ -1,0 +1,174 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZFI_DAC_FLIRT_SRV" xml:lang="en" sap:schema-version="1">
+            <Annotation
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Term="Core.SchemaVersion" String="1.0.0"/>
+                <EntityType Name="FLIRT_MASTER" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="AirlineCode"/>
+                        <PropertyRef Name="AirlineType"/>
+                        <PropertyRef Name="FlightNumber"/>
+                        <PropertyRef Name="Registration"/>
+                        <PropertyRef Name="Side"/>
+                        <PropertyRef Name="ActualDate"/>
+                        <PropertyRef Name="ActualTime"/>
+                    </Key>
+                    <Property Name="AirlineCode" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Airline Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AirlineType" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Airline Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Flight Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Registration" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Registration" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Side" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Side (In / Out)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Act. Date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualTime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Act. Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualDateUtc" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Actual Date of fligh" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualTimeUtc" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Act. Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Plan date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanTime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Plan time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanDateUtc" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Plan date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanTimeUtc" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Plan Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="BlockTime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Block Time of Flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="BlockTimeUtc" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Block Time of Flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Routing" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Routing" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RoutingCities" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Routing Cities" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ACType" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Aircraft Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Flight Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightCat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Flight Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxOnBoard" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxFiClass" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total in First Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxBuClass" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. in Business" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxEcClass" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. in Economy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxHaj" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total Haj Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxUmrah" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. Umrah Passenger" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxMechanic" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total Mechanics" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxSecurity" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. Security Person" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxDiplomats" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total  - Diplomats" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxInfants" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. Infant Passenge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxTransit" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Tot. in Transit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotTaxableDep" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Total Taxable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotCargoLoad" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:unicode="false" sap:unit="CargoLoadUnit" sap:label="Total Cargo Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CargoLoadUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Cargo Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotCargoTransit" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:unicode="false" sap:unit="CargoTranUnit" sap:label="Tot. Cargo Transit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CargoTranUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Cargo Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotMailLoad" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:unicode="false" sap:unit="MailLoadUnit" sap:label="Total Mail Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MailLoadUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mail Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotMailTransit" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:unicode="false" sap:unit="MailTranUnit" sap:label="Tot. Mail Trans Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MailTranUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mail Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="Remarks" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Remarks" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Paxd" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Passenger D" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ParkingCat" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Parking Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AircraftWeight" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Tot. Aircraft Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AircraftWeightUnit" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Weight Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="MtowInTons" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="2" sap:unicode="false" sap:label="Max. take-off Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Flight Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MzStatus" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Status of the transa" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RevenuePax" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Revenue Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RecordSeqNo" Type="Edm.String" Nullable="false" MaxLength="11" sap:unicode="false" sap:label="Record Sequence No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="SrvcAgentCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Service Agent Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Gate" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Gate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Post" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Position" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Terminal" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Terminal" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PaxTransfer" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Pax Transfer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CountryName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Country Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PaxCalc" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Pax Calculated" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <EntityType Name="FLIRT_OP" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="Company"/>
+                    </Key>
+                    <Property Name="Company" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Undefined range (can be used for patch levels)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <NavigationProperty Name="NAV_FO" Relationship="ZFI_DAC_FLIRT_SRV.NAV_FO" FromRole="FromRole_NAV_FO" ToRole="ToRole_NAV_FO"/>
+                </EntityType>
+                <EntityType Name="FLIRT_OPERATION1" sap:content-version="1">
+                    <Key>
+                        <PropertyRef Name="AirlineCode"/>
+                        <PropertyRef Name="AirlineType"/>
+                        <PropertyRef Name="FlightNumber"/>
+                        <PropertyRef Name="Registration"/>
+                        <PropertyRef Name="Side"/>
+                        <PropertyRef Name="ActualDate"/>
+                        <PropertyRef Name="ActualTime"/>
+                        <PropertyRef Name="ActualDateUtc"/>
+                        <PropertyRef Name="ActualTimeUtc"/>
+                    </Key>
+                    <Property Name="AirlineCode" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Airline Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AirlineType" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Airline Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Flight Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Registration" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Registration" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Side" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Side (In / Out)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Act. Date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualTime" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Act. Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualDateUtc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Actual Date of fligh" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ActualTimeUtc" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Act. Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanDate" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Plan date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanTime" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Plan time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanDateUtc" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Plan date of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PlanTimeUtc" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Plan Time of flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="BlockTime" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Block Time of Flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="BlockTimeUtc" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Block Time of Flight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Routing" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Routing" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RoutingCities" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Routing Cities" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ACType" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Aircraft Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightType" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Flight Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightCat" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Flight Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxOnBoard" Type="Edm.Int16" sap:unicode="false" sap:label="Total Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxFiClass" Type="Edm.Int16" sap:unicode="false" sap:label="Total in First Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxBuClass" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. in Business" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxEcClass" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. in Economy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxHaj" Type="Edm.Int16" sap:unicode="false" sap:label="Total Haj Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxUmrah" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. Umrah Passenger" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxMechanic" Type="Edm.Int16" sap:unicode="false" sap:label="Total Mechanics" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxSecurity" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. Security Person" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxDiplomats" Type="Edm.Int16" sap:unicode="false" sap:label="Total  - Diplomats" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxInfants" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. Infant Passenge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotPaxTransit" Type="Edm.Int16" sap:unicode="false" sap:label="Tot. in Transit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotTaxableDep" Type="Edm.Int16" sap:unicode="false" sap:label="Total Taxable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="TotCargoLoad" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="Total Cargo Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CargoLoadUnit" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Cargo Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotCargoTransit" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="Tot. Cargo Transit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CargoTranUnit" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Cargo Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotMailLoad" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="Total Mail Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MailLoadUnit" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Mail Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="TotMailtransit" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="Tot. Mail Trans Load" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MailTranUnit" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Mail Load Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="Remarks" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="Remarks" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Paxd" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Passenger D" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="ParkingCat" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Parking Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AircraftWeight" Type="Edm.Int32" sap:unicode="false" sap:label="Tot. Aircraft Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="AircraftWeightUnit" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Weight Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                    <Property Name="MtowInTons" Type="Edm.Decimal" Precision="15" Scale="2" sap:unicode="false" sap:label="Max. take-off Weight" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="FlightStatus" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Flight Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="MzStatus" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Status of the transa" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RevenuePax" Type="Edm.Int32" sap:unicode="false" sap:label="Revenue Passengers" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="RecordSeqNo" Type="Edm.String" MaxLength="11" sap:unicode="false" sap:label="Record Sequence No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="SrvcAgentCode" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Service Agent Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Gate" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Gate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Post" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Position" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="Terminal" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Terminal" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PaxTransfer" Type="Edm.Int32" sap:unicode="false" sap:label="Pax Transfer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="CountryName" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Country Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                    <Property Name="PaxCalc" Type="Edm.Int16" sap:unicode="false" sap:label="Pax Calculated" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                </EntityType>
+                <Association Name="NAV_FO" sap:content-version="1">
+                    <End Type="ZFI_DAC_FLIRT_SRV.FLIRT_OP" Multiplicity="0..1" Role="FromRole_NAV_FO"/>
+                    <End Type="ZFI_DAC_FLIRT_SRV.FLIRT_OPERATION1" Multiplicity="*" Role="ToRole_NAV_FO"/>
+                </Association>
+                <EntityContainer Name="ZFI_DAC_FLIRT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                    <EntitySet Name="FLIRT_MASTERSet" EntityType="ZFI_DAC_FLIRT_SRV.FLIRT_MASTER" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                    <EntitySet Name="FLIRT_OPSet" EntityType="ZFI_DAC_FLIRT_SRV.FLIRT_OP" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                    <EntitySet Name="FLIRT_OPERATION1set" EntityType="ZFI_DAC_FLIRT_SRV.FLIRT_OPERATION1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                    <AssociationSet Name="NAV_FOSet" Association="ZFI_DAC_FLIRT_SRV.NAV_FO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                        <End EntitySet="FLIRT_OPSet" Role="FromRole_NAV_FO"/>
+                        <End EntitySet="FLIRT_OPERATION1set" Role="ToRole_NAV_FO"/>
+                    </AssociationSet>
+                </EntityContainer>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZFI_DAC_FLIRT_SRV/$metadata"/>
+                    <atom:link
+                        xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZFI_DAC_FLIRT_SRV/$metadata"/>
+                    </Schema>
+                </edmx:DataServices>
+            </edmx:Edmx>

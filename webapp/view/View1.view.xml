@@ -1,0 +1,106 @@
+<mvc:View controllerName="com.testTest.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout" >
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<f:SimpleForm id="T2" editable="true" columnsM="2" columnsL="3" columnsXL="4">
+						<f:content>
+						<VBox id="vbox2">
+							<HBox id="hb1">
+							<Label id="l1" text="Side"/>
+								<Input id="i1" editable="false"/>
+							<Label id="l2" text="Plan Date"/>
+								<Input id="i2" editable="false"/>
+							<Label id="l3" text="Plan Time"/>
+								<Input id="i3" editable="false"/>
+							</HBox>
+							<HBox id="hb2">
+							<Label id="l4" text="Actual Date"/>
+								<Input id="i4" editable="false"/>
+							<Label id="l5" text="Actual Time"/>
+								<Input id="i5" editable="false"/>
+							<Label id="l6" text="On/Off Bloct Time"/>
+								<Input id="i6" editable="false"/>
+							</HBox>
+							<HBox id="hb3">
+							<Label id="l7" text="On/Off Bloct Time (UTC)"/>
+								<Input id="i7" editable="false"/>
+							<Label id="l8" text="Airline"/>
+								<Input id="i8" editable="false"/>
+							<Label id="l9" text="Flight No"/>
+								<Input id="i9" editable="false"/>
+							</HBox>
+							<Label id="l10" text="Routing"/>
+								<Input id="i10" editable="false"/>
+						</VBox>
+						</f:content>
+					</f:SimpleForm>
+					<!--</VBox>-->
+					<f:SimpleForm id="T1">
+						<f:content>	
+							<ScrollContainer
+								height="100%"
+								vertical="true"
+								horizontal="true"
+								focusable="true">
+								<Table id="t1" visible="true" selectionChange="onRowSelect" mode="SingleSelect">
+									<columns>
+										<!--<Column width="10px" hAlign="Center">-->
+										<!--	<Label text="" design="Bold"/>-->
+										<!--</Column>-->
+										<Column width="100px" hAlign="Center">
+											<Label text="Side" design="Bold"/>
+										</Column>
+										<Column width="100px" hAlign="Center" visible="true">
+											<Label text="Plan Date" design="Bold" wrapping="true"/>
+										</Column>
+										<Column id="c2" width="100px" hAlign="Center" visible="true">
+											<Label text="Plan Time" design="Bold" wrapping="true"/>
+										</Column>
+										<Column id="c3" width="100px" hAlign="Center" visible="true">
+											<Label text="Actual Date " design="Bold" wrapping="true"/>
+										</Column>
+										<Column width="100px" hAlign="Center">
+											<Label text="Actual Time" design="Bold" wrapping="true"/>
+										</Column>
+										<Column width="100px" hAlign="Center">
+											<Label text="On/Off Bloct Time" design="Bold" wrapping="true" wrappingType="Normal"/>
+										</Column>
+										<Column width="100px" hAlign="Center" visible="true">
+											<Label text="On/Off Bloct Time (UTC)" design="Bold" wrapping="true"/>
+										</Column>
+										<Column width="50px" hAlign="Center" visible="true">
+											<Label text="Airline" design="Bold"/>
+										</Column>
+										<Column width="100px" hAlign="Center" visible="true">
+											<Label text="Flight No" design="Bold" wrapping="true"/>
+										</Column>
+										<Column width="100px" hAlign="Center">
+											<Label text="Routing" design="Bold" wrapping="true"/>
+										</Column>
+									</columns>
+									<items/>
+								</Table>
+							</ScrollContainer>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+				<footer>
+					<OverflowToolbar id="otbFooter">
+						<Button icon="sap-icon://excel-attachment" press="onExport"/>
+						<Button id="add" type="Accept" text="Edit" press="onAddL" tooltip="Add Row" visible="true"/>
+						<Button id="sub" type="Reject" text="Delete"  press="onDelete" tooltip="Delete Row" visible="true"/>
+						<ToolbarSpacer/>
+						<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx,txt"
+								buttonText="Bulk Upload" icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload" visible="true"/>
+						<ToolbarSpacer/>
+						<Button type="Reject" text="Clear" press="onClear" />
+						<Button type="Accept" text="Submit" press="onSave" visible="true"/>
+						
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
